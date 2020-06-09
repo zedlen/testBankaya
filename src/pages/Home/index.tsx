@@ -5,7 +5,7 @@ import {
   FlatList,
   StyleSheet,
   View,
-  TouchableOpacity,
+  //TouchableOpacity,
   Text,
   Button,
 } from 'react-native';
@@ -13,7 +13,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {RootState} from '../../store/store';
 import {loadList} from '../../store/pokemonSlice';
 import {PokemonItem, Header} from '../../components';
-import Icon from 'react-native-vector-icons/FontAwesome';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Home = () => {
   const {items, loaded, after, loading, error, errorMsg} = useSelector(
@@ -28,9 +28,9 @@ const Home = () => {
   const endReached = () => {
     dispatch(loadList(after));
   };
-  const pressButton = () => {
+  /*const pressButton = () => {
     //console.log('pressed');
-  };
+  };*/
   const reloadData = () => {
     dispatch(loadList());
   };
@@ -42,7 +42,7 @@ const Home = () => {
           {error && (
             <View style={style.error}>
               <Text style={style.errorMsg}> {errorMsg}</Text>
-              <Button title="Retry" onPress={reloadData}/>
+              <Button title="Retry" onPress={reloadData} />
             </View>
           )}
           <FlatList

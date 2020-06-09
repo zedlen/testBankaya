@@ -152,9 +152,9 @@ android {
         }
         release {
             storeFile file('your_key_name.keystore')
-            storePassword 'zedlen93'
+            storePassword 'your_key_store_password'
             keyAlias 'your_key_alias'
-            keyPassword 'zedlen93'
+            keyPassword 'your_key_file_alias_password'
         }
     }
     buildTypes {
